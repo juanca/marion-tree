@@ -9,5 +9,9 @@
   },
   "keywords": [],
   "author": "Juan Carlos Medina",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^2.4.1",
+    "nodemon": "^1.9.1"
+  }
 }
