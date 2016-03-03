@@ -9,7 +9,8 @@
 
 ### Testing
 
-* `nodemon --exec jasmine`
+* `npm test` runs jasmine specs once
+* `npm test:watch` runs jasmine specs whenever any file changes
 
 ### Accessing the application
 
