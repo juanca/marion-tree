@@ -11,6 +11,7 @@
   "author": "Juan Carlos Medina",
   "license": "ISC",
   "devDependencies": {
+    "coffee-script": "^1.10.0",
     "jasmine": "^2.4.1",
     "nodemon": "^1.9.1"
   }
