@@ -13,4 +13,4 @@
 
 ### Accessing the application
 
-* `node index.js`
+* `node app.js`

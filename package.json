@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jasmine",
-    "test:watch": "nodemon --exec jasmine"
+    "test:watch": "nodemon --exec jasmine",
+    "run": "node app.js",
+    "run:watch": "nodemon --exec node app.js"
   },
   "keywords": [],
   "author": "Juan Carlos Medina",
