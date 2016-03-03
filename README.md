@@ -4,7 +4,8 @@
 
 ### Requirements
 
-* `npm install -g jasmine nodemon`
+* `npm install -g coffee-script` for transpiling `.coffee` into `.js`
+* `npm install -g jasmine nodemon` for testing
 
 ### Testing
 
