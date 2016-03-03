@@ -1,0 +1,12 @@
+{
+  "name": "lists-of-lists",
+  "version": "1.0.0",
+  "description": "Lists of lists in Backbone.Marionette",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Juan Carlos Medina",
+  "license": "ISC"
+}
