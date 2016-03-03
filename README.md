@@ -1,11 +1,11 @@
-Lists of lists in Backbone.Marionette
+# Lists of lists in Backbone.Marionette
 
-# Developing
+## Developing
 
-## Requirements
+### Requirements
 
 * `npm install -g jasmine nodemon`
 
-## Testing
+### Testing
 
 * `nodemon --exec jasmine`
