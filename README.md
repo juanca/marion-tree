@@ -10,3 +10,7 @@
 ### Testing
 
 * `nodemon --exec jasmine`
+
+### Accessing the application
+
+* `node index.js`
