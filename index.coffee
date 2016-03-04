@@ -1,5 +1,5 @@
 $ = require 'jquery'
-_ = require 'backbone.marionette/node_modules/underscore'
+_ = require 'underscore'
 
 document.write("It works!")
 
