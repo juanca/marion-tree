@@ -4,6 +4,7 @@
   "description": "Lists of lists in Backbone.Marionette",
   "main": "index.js",
   "scripts": {
+    "start": "webpack --progress --colors",
     "test": "jasmine",
     "test:watch": "nodemon --exec jasmine",
     "compile": "webpack --progress --colors",
