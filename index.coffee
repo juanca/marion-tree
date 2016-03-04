@@ -1,4 +1,4 @@
-document.write("It works.")
+document.write("It works!")
 
 Player = require './lib/jasmine_examples/Player'
 Song = require './lib/jasmine_examples/Song'

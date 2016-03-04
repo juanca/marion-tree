@@ -7,7 +7,7 @@
     "test": "jasmine",
     "test:watch": "nodemon --exec jasmine",
     "compile": "webpack --progress --colors",
-    "compile:watch": "webpack --progress --colors --watch"
+    "dev": "webpack-dev-server --progress --colors"
   },
   "keywords": [],
   "author": "Juan Carlos Medina",
@@ -17,6 +17,7 @@
     "coffee-script": "^1.10.0",
     "jasmine": "^2.4.1",
     "nodemon": "^1.9.1",
-    "webpack": "^1.12.14"
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
   }
 }
