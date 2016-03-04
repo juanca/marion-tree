@@ -3,8 +3,6 @@ module.exports =
   output:
     path: __dirname
     filename: 'index.js'
-    libraryTarget: 'var'
-    library: 'Foo'
   module:
     loaders: [
       { test: /\.coffee$/, loader: 'coffee' }

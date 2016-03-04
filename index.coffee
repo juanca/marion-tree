@@ -1,9 +1,17 @@
+$ = require 'jquery'
+_ = require 'backbone.marionette/node_modules/underscore'
+
 document.write("It works!")
 
-Player = require './lib/jasmine_examples/Player'
-Song = require './lib/jasmine_examples/Song'
-player = new Player
-song = new Song
-player.play song
+M = require 'backbone.marionette'
 
-module.exports = player
+document.write("Backbone.Marionette!")
+
+m = new M.ItemView
+m.template = _.template 'poop'
+
+document.write("Backbone.Marionette.ItemView!")
+
+m.render()
+
+$('body').append(m.$el)
