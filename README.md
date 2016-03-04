@@ -12,5 +12,3 @@
 * `npm test:watch` runs jasmine specs whenever any file changes
 
 ### Accessing the application
-
-* `node app.js`
