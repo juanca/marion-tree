@@ -1,3 +1,4 @@
+var Foo =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -44,12 +45,21 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
+	var Player, Song, player, song;
+
 	document.write("It works.");
 
-	module.exports = {
-	  Player: __webpack_require__(1),
-	  Song: __webpack_require__(2)
-	};
+	Player = __webpack_require__(1);
+
+	Song = __webpack_require__(2);
+
+	player = new Player;
+
+	song = new Song;
+
+	player.play(song);
+
+	module.exports = player;
 
 
 /***/ },
