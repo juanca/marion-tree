@@ -1,17 +1,9 @@
+document.write 'i dunno why i have to write or something to get body working T____T'
+
 $ = require 'jquery'
-_ = require 'underscore'
+Grid = require './lib/grid'
 
-document.write("It works!")
+grid = new Grid
+grid.render()
 
-M = require 'backbone.marionette'
-
-document.write("Backbone.Marionette!")
-
-m = new M.ItemView
-m.template = _.template 'poop'
-
-document.write("Backbone.Marionette.ItemView!")
-
-m.render()
-
-$('body').append(m.$el)
+$('body').html(grid.$el)
