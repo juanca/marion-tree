@@ -4,7 +4,7 @@ Marionette = require 'backbone.marionette'
 HeaderRow = require './header-row'
 
 class Grid extends Marionette.LayoutView
-  className: 'grid'
+  className: -> 'grid'
   template: -> '''
     <div class='header-region'></div>
   '''
