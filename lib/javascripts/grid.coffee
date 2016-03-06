@@ -1,3 +1,5 @@
+require '!style!css!sass!../stylesheets/grid.scss'
+
 Marionette = require 'backbone.marionette'
 HeaderRow = require './header-row'
 

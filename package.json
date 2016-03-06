@@ -24,8 +24,12 @@
     "backbone.marionette": "^2.4.4",
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.10.0",
+    "css-loader": "^0.23.1",
     "http-server": "^0.9.0",
     "jquery": "^2.2.1",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "style-loader": "^0.13.0",
     "underscore": "^1.8.3",
     "webpack": "^1.12.14"
   }

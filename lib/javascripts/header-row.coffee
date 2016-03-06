@@ -1,3 +1,5 @@
+require '!style!css!sass!../stylesheets/header-row.scss'
+
 Marionette = require 'backbone.marionette'
 DefaultHeaderCell = require './header-cells/string-cell'
 
