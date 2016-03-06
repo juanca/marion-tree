@@ -1,6 +1,6 @@
 describe 'Header', ->
   Marionette = require 'backbone.marionette'
-  Header = require '../lib/Header'
+  HeaderRow = require '../lib/header-row'
 
   initView = ({ columns } = {}) ->
     columns ?= new Backbone.Collection [
@@ -9,13 +9,13 @@ describe 'Header', ->
       label: 'iamotherlabel'
     ]
 
-    new Header { collection: columns }
+    new HeaderRow { collection: columns }
 
   showView = ->
     initView(arguments...).render()
 
-  it 'is a collection view', ->
-    expect(initView()).toEqual jasmine.any Marionette.CollectionView
+  it 'has a className', ->
+    expect(showView().$el).toHaveClass 'header-row'
 
   it 'defaults the childView to a StringCell', ->
     header = showView()
