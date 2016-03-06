@@ -3,4 +3,4 @@ describe 'Grid', ->
   Grid = require '../lib/Grid'
 
   it 'is a layout view', ->
-    expect(new Grid).toBeInstanceOf Marionette.LayoutView
+    expect(new Grid).toEqual jasmine.any Marionette.LayoutView

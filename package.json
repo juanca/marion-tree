@@ -5,17 +5,18 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --progress --colors && http-server",
-    "test": "jasmine",
-    "test:watch": "nodemon --exec jasmine",
-    "compile": "webpack --progress --colors",
+    "test": "karma start",
     "dev": "webpack-dev-server --progress --colors"
   },
   "keywords": [],
   "author": "Juan Carlos Medina",
   "license": "ISC",
   "devDependencies": {
-    "jasmine": "^2.4.1",
-    "nodemon": "^1.9.1",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.21",
+    "karma-chrome-launcher": "^0.2.2",
+    "karma-jasmine": "^0.3.7",
+    "karma-webpack": "^1.7.0",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
