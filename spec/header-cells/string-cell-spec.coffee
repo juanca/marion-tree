@@ -1,5 +1,5 @@
 describe 'HeaderCells StringCell', ->
-  HeaderCell = require '../../lib/header-cells/string-cell'
+  HeaderCell = require '../../lib/javascripts/header-cells/string-cell'
 
   initView = ({ model } = {}) ->
     model ?= new Backbone.Model label: 'header cell label'

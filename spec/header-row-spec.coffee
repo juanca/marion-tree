@@ -1,6 +1,5 @@
 describe 'Header', ->
-  Marionette = require 'backbone.marionette'
-  HeaderRow = require '../lib/header-row'
+  HeaderRow = require '../lib/javascripts/header-row'
 
   initView = ({ columns } = {}) ->
     columns ?= new Backbone.Collection [

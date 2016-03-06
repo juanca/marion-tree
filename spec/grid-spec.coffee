@@ -1,6 +1,5 @@
 describe 'Grid', ->
-  Marionette = require 'backbone.marionette'
-  Grid = require '../lib/grid'
+  Grid = require '../lib/javascripts/grid'
 
   initView = ({ columns, collection } = {}) ->
     columns ?= new Backbone.Collection [
