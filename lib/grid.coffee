@@ -10,7 +10,9 @@ class Grid extends Marionette.LayoutView
   regions: ->
     header: '.header-region'
 
+  initialize: ({ @collection, @columns }) ->
+
   onRender: ->
-    @header.show new Header
+    @header.show new Header collection: @columns
 
 module.exports = Grid
