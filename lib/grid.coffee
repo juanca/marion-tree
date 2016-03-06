@@ -1,5 +1,5 @@
 Marionette = require 'backbone.marionette'
-Header = require './header'
+HeaderRow = require './header-row'
 
 class Grid extends Marionette.LayoutView
   className: 'grid'
@@ -13,6 +13,6 @@ class Grid extends Marionette.LayoutView
   initialize: ({ @collection, @columns }) ->
 
   onRender: ->
-    @header.show new Header collection: @columns
+    @header.show new HeaderRow collection: @columns
 
 module.exports = Grid

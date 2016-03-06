@@ -1,7 +1,6 @@
 describe 'Grid', ->
   Marionette = require 'backbone.marionette'
-  Grid = require '../lib/Grid'
-  Header = require '../lib/Header'
+  Grid = require '../lib/grid'
 
   initView = ({ columns, collection } = {}) ->
     columns ?= new Backbone.Collection [
@@ -19,8 +18,8 @@ describe 'Grid', ->
   showView = ->
     initView(arguments...).render()
 
-  it 'is a layout view', ->
-    expect(initView()).toEqual jasmine.any Marionette.LayoutView
+  it 'has a className', ->
+    expect(showView().$el).toHaveClass 'grid'
 
   describe 'header region', ->
     it 'has a header row', ->
