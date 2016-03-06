@@ -6,6 +6,7 @@ module.exports =
   module:
     loaders: [
       { test: /\.coffee$/, loader: 'coffee' }
+      { test: /\.scss$/, loaders: ['style', 'css', 'sass'] }
     ]
   resolve:
-    extensions: ['', '.web.coffee', '.web.js', '.coffee', '.js']
+    extensions: ['', '.web.coffee', '.web.js', '.coffee', '.js', '.scss']
