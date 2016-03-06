@@ -11,7 +11,7 @@ module.exports = (config)  ->
     ]
 
     preprocessors:
-      './spec/**/*spec.coffee': ['webpack']
+      './spec/**/*': ['webpack']
 
     webpack: webpackConfig
 
