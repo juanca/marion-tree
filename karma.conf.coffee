@@ -11,6 +11,7 @@ module.exports = (config)  ->
     ]
 
     preprocessors:
+      './helpers/**/*': ['webpack']
       './spec/**/*': ['webpack']
 
     webpack: webpackConfig
