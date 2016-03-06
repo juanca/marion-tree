@@ -10,3 +10,6 @@ describe 'HeaderCells StringCell', ->
 
   it 'renders the label', ->
     expect(showView().$el).toHaveText 'header cell label'
+
+  it 'has a className', ->
+    expect(showView().$el).toHaveClass 'string-cell'
