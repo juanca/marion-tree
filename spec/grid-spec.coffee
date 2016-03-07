@@ -1,5 +1,6 @@
 describe 'Grid', ->
   Grid = require '../lib/javascripts/grid'
+  view = null
 
   initView = ({ columns, collection } = {}) ->
     columns ?= new Backbone.Collection [
@@ -12,16 +13,20 @@ describe 'Grid', ->
       {}
     ]
 
-    new Grid { columns, collection }
+    view = new Grid { columns, collection }
 
   showView = ->
     initView(arguments...).render()
+
+  afterEach ->
+    view?.destroy()
+    view = null
 
   it 'has a className', ->
     expect(showView().$el).toHaveClass 'grid'
 
   describe 'header region', ->
     it 'has a header row', ->
-      grid = showView()
-      expect(grid.$('.header-region')).not.toBeEmpty()
-      expect(grid.header.currentView.$el.children()).toHaveLength(2)
+      showView()
+      expect(view.$('.header-region')).not.toBeEmpty()
+      expect(view.header.currentView.$el.children()).toHaveLength(2)

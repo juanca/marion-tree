@@ -1,5 +1,6 @@
 describe 'Cells StringCell', ->
   Cell = require '../../lib/javascripts/cells/string-cell'
+  view = null
 
   initView = ({ column, model } = {}) ->
     column ?= new Backbone.Model name: 'someAttribute'
@@ -8,6 +9,10 @@ describe 'Cells StringCell', ->
 
   showView = ->
     initView(arguments...).render()
+
+  afterEach ->
+    view?.destroy()
+    view = null
 
   it 'has a className', ->
     expect(showView().$el).toHaveClass 'cells-string-cell'
