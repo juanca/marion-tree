@@ -20,4 +20,4 @@ describe 'Body', ->
     expect(showView().$el).toHaveClass 'body'
 
   it 'has many body rows', ->
-    expect(showView().$el.children).not.toBeEmpty()
+    expect(showView().$el).not.toBeEmpty()
