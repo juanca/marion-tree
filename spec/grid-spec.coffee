@@ -10,7 +10,7 @@ describe 'Grid', ->
     ]
 
     collection ?= new Backbone.Collection [
-      {}
+      { foo: 'some model' }
     ]
 
     view = new Grid { columns, collection }

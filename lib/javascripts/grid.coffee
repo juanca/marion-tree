@@ -15,6 +15,6 @@ class Grid extends Marionette.LayoutView
   initialize: ({ @collection, @columns }) ->
 
   onRender: ->
-    @header.show new HeaderRow collection: @columns
+    @header.show new HeaderRow { @columns }
 
 module.exports = Grid

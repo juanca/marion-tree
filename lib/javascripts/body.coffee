@@ -7,5 +7,9 @@ class Body extends Marionette.CollectionView
   className: -> 'body'
 
   childView: BodyRow
+  childViewOptions: (model) ->
+    { @columns, model }
+
+  initialize: ({ @columns, @collection }) ->
 
 module.exports = Body

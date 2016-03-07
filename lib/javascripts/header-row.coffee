@@ -9,4 +9,7 @@ class HeaderRow extends Marionette.CollectionView
   getChildView: (column) ->
     DefaultHeaderCell
 
+  initialize: ({ @columns }) ->
+    @collection = @columns
+
 module.exports = HeaderRow

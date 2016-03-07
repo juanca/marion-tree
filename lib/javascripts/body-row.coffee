@@ -10,8 +10,7 @@ class BodyRow extends Marionette.CollectionView
     DefaultCell
 
   childViewOptions: (column) ->
-    column: column
-    model: @model
+    { column, @model }
 
   initialize: ({ @columns, @model }) ->
     @collection = @columns
