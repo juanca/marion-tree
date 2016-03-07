@@ -6,8 +6,9 @@ DefaultCell = require './cells/string-cell'
 class BodyRow extends Marionette.CollectionView
   className: -> 'body-row'
 
+  childView: DefaultCell
   getChildView: (column) ->
-    DefaultCell
+    column.get('cell') ? @childView
 
   childViewOptions: (column) ->
     { column, @model }

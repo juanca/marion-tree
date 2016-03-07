@@ -27,3 +27,12 @@ describe 'BodyRow', ->
   it 'defaults the childView to a StringCell', ->
     renderedText = showView().children.map (stringCellView) -> stringCellView.$el.text()
     expect(renderedText).toEqual ['hola', 'todos']
+
+  it 'uses the cell of the column', ->
+    showView columns: new Backbone.Collection [
+      { cell: Backbone.Marionette.ItemView.extend template: -> 'hello' }
+      { cell: Backbone.Marionette.ItemView.extend template: -> 'world' }
+    ]
+
+    renderedText = view.children.map (stringCellView) -> stringCellView.$el.text()
+    expect(renderedText).toEqual ['hello', 'world']

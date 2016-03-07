@@ -6,8 +6,9 @@ DefaultHeaderCell = require './header-cells/string-cell'
 class HeaderRow extends Marionette.CollectionView
   className: -> 'header-row'
 
+  childView: DefaultHeaderCell
   getChildView: (column) ->
-    DefaultHeaderCell
+    column.get('headerCell') ? @childView
 
   initialize: ({ @columns }) ->
     @collection = @columns
