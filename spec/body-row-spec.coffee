@@ -25,6 +25,5 @@ describe 'BodyRow', ->
     expect(showView().$el).toHaveClass 'body-row'
 
   it 'defaults the childView to a StringCell', ->
-    showView().children.each (stringCellView) ->
-      value = stringCellView.model.get(stringCellView.column.get('name'))
-      expect(stringCellView.$el).toHaveText value
+    renderedText = showView().children.map (stringCellView) -> stringCellView.$el.text()
+    expect(renderedText).toEqual ['hola', 'todos']
