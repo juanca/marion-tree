@@ -10,6 +10,6 @@ class StringCell extends Marionette.ItemView
   templateHelpers: ->
     text: @model.get @column.get('name')
 
-  initialize: ({ @column }) ->
+  initialize: ({ @model, @column }) ->
 
 module.exports = StringCell
