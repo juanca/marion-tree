@@ -11,6 +11,8 @@ describe 'Grid', ->
 
     collection ?= new Backbone.Collection [
       { foo: 'some model' }
+      { foo: 'some actor' }
+      { foo: 'perhaps a model' }
     ]
 
     view = new Grid { columns, collection }
@@ -30,3 +32,9 @@ describe 'Grid', ->
       showView()
       expect(view.$('.header-region')).not.toBeEmpty()
       expect(view.header.currentView.$el.children()).toHaveLength(2)
+
+  describe 'body region', ->
+    it 'has many body row', ->
+      showView()
+      expect(view.$('.body-region')).not.toBeEmpty()
+      expect(view.body.currentView.$el.children()).toHaveLength(3)
