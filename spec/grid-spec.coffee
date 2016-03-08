@@ -10,9 +10,9 @@ describe 'Grid', ->
     ]
 
     collection ?= new Backbone.Collection [
-      { foo: 'some model' }
-      { foo: 'some actor' }
-      { foo: 'perhaps a model' }
+      { foo: 'some model', bar: 'some bar', baz: 'bezz' }
+      { foo: 'some actor', bar: 'some diner', baz: 'bizz' }
+      { foo: 'perhaps a model', bar: 'bar?', baz: 'bozz' }
     ]
 
     view = new Grid { columns, collection }
@@ -26,6 +26,27 @@ describe 'Grid', ->
 
   it 'has a className', ->
     expect(showView().$el).toHaveClass 'grid'
+
+  it 'defaults all attributes as string columns', ->
+    collection = new Backbone.Collection [
+      { foo: 'some model', bar: 'some bar', baz: 'bezz' }
+      { foo: 'some actor', bar: 'some diner', baz: 'bizz' }
+      { foo: 'perhaps a model', bar: 'bar?', baz: 'bozz' }
+    ]
+
+    view = (new Grid { collection }).render()
+
+    renderedLabels = view.header.currentView.children.map (headerCell) -> headerCell.$el.text()
+    expect(renderedLabels).toEqual ['foo', 'bar', 'baz']
+
+    renderedCells = view.body.currentView.children.map (bodyRow) ->
+      bodyRow.children.map (cell) -> cell.$el.text()
+
+    expect(renderedCells).toEqual [
+      ['some model', 'some bar', 'bezz']
+      ['some actor', 'some diner', 'bizz']
+      ['perhaps a model', 'bar?', 'bozz']
+    ]
 
   describe 'header region', ->
     it 'has a header row', ->

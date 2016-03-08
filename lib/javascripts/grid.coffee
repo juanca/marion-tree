@@ -19,6 +19,12 @@ class Grid extends Marionette.LayoutView
   bodyView: Body
 
   initialize: ({ @collection, @columns }) ->
+    if @collection.length && !@columns
+      columns = for attribute in @collection.first().keys()
+        label: attribute
+        name: attribute
+
+      @columns ?= new Backbone.Collection columns
 
   onRender: ->
     @header.show new @headerView { @columns }
