@@ -40,7 +40,7 @@ describe 'Grid', ->
     expect(renderedLabels).toEqual ['foo', 'bar', 'baz']
 
     renderedCells = view.body.currentView.children.map (bodyRow) ->
-      bodyRow.children.map (cell) -> cell.$el.text()
+      bodyRow.columnsView.currentView.children.map (cell) -> cell.$el.text()
 
     expect(renderedCells).toEqual [
       ['some model', 'some bar', 'bezz']

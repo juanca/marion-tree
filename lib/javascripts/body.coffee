@@ -1,12 +1,12 @@
 require '../stylesheets/body'
 
 Marionette = require 'backbone.marionette'
-BodyRowColumns = require './body-row-columns'
+BodyRow = require './body-row'
 
 class Body extends Marionette.CollectionView
   className: -> 'body'
 
-  childView: BodyRowColumns
+  childView: BodyRow
   childViewOptions: (model) ->
     { @columns, model }
 
