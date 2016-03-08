@@ -1,5 +1,5 @@
-describe 'BodyRow', ->
-  BodyRow = require '../lib/javascripts/body-row'
+describe 'BodyRowColumns', ->
+  BodyRowColumns = require '../lib/javascripts/body-row-columns'
   view = null
 
   initView = ({ columns, model } = {}) ->
@@ -12,7 +12,7 @@ describe 'BodyRow', ->
       greeting: 'hola'
       everyone: 'todos'
 
-    view = new BodyRow { columns, model }
+    view = new BodyRowColumns { columns, model }
 
   showView = ->
     initView(arguments...).render()
@@ -22,7 +22,7 @@ describe 'BodyRow', ->
     view = null
 
   it 'has a className', ->
-    expect(showView().$el).toHaveClass 'body-row'
+    expect(showView().$el).toHaveClass 'body-row-columns'
 
   it 'defaults the childView to a StringCell', ->
     renderedText = showView().children.map (stringCellView) -> stringCellView.$el.text()

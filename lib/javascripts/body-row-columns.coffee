@@ -1,10 +1,10 @@
-require '../stylesheets/body-row'
+require '../stylesheets/body-row-columns'
 
 Marionette = require 'backbone.marionette'
 DefaultCell = require './cells/string-cell'
 
-class BodyRow extends Marionette.CollectionView
-  className: -> 'body-row'
+class BodyRowColumns extends Marionette.CollectionView
+  className: -> 'body-row-columns'
 
   childView: DefaultCell
   getChildView: (column) ->
@@ -16,4 +16,4 @@ class BodyRow extends Marionette.CollectionView
   initialize: ({ @columns, @model }) ->
     @collection = @columns
 
-module.exports = BodyRow
+module.exports = BodyRowColumns
