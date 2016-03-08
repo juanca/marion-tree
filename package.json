@@ -1,7 +1,7 @@
 {
-  "name": "lists-of-lists",
+  "name": "marion-tree",
   "version": "1.0.0",
-  "description": "Lists of lists in Backbone.Marionette",
+  "description": "Semantic data trees in Backbone.Marionette",
   "main": "index.js",
   "scripts": {
     "start": "webpack --progress --colors && http-server",
