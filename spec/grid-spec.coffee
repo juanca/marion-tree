@@ -29,12 +29,30 @@ describe 'Grid', ->
 
   describe 'header region', ->
     it 'has a header row', ->
+      initView()
+      view.headerView = Backbone.Marionette.ItemView.extend
+        template: -> 'header view'
+
+      view.render()
+      expect(view.$('.header-region')).not.toBeEmpty()
+      expect(view.header.currentView.$el).toHaveText 'header view'
+
+    it 'has a default header row', ->
       showView()
       expect(view.$('.header-region')).not.toBeEmpty()
       expect(view.header.currentView.$el.children()).toHaveLength(2)
 
   describe 'body region', ->
-    it 'has many body row', ->
+    it 'has a header row', ->
+      initView()
+      view.bodyView = Backbone.Marionette.ItemView.extend
+        template: -> 'body view'
+
+      view.render()
+      expect(view.$('.body-region')).not.toBeEmpty()
+      expect(view.body.currentView.$el).toHaveText 'body view'
+
+    it 'has many default body rows', ->
       showView()
       expect(view.$('.body-region')).not.toBeEmpty()
       expect(view.body.currentView.$el.children()).toHaveLength(3)
