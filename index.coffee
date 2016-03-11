@@ -17,9 +17,12 @@ columns = new Backbone.Collection [
 ]
 
 collection = new Backbone.Collection [
-  { greeting: 'hola', everyone: 'todos'}
-  { greeting: 'hey', everyone: 'yall'}
-  { greeting: 'beep', everyone: 'boop'}
+  { greeting: 'hola', everyone: 'todos' }
+  { greeting: 'hey', everyone: 'yall', collection: new Backbone.Collection [
+    { greeting: 'yeh', everyone: 'llay' }
+    { greeting: 'Huzzah!', everyone: '!!!' }
+  ] }
+  { greeting: 'beep', everyone: 'boop' }
 ]
 
 grid = new Grid { collection, columns }
