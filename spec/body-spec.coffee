@@ -2,9 +2,10 @@ describe 'Body', ->
   Body = require '../lib/javascripts/body'
   view = null
 
-  initView = ({ collection } = {}) ->
+  initView = ({ collection, nestedCollection } = {}) ->
+    nestedCollection ?= new Backbone.Collection
     collection ?= new Backbone.Collection [
-      { foo: 'foo', bar: 'bar' }
+      { foo: 'foo', bar: 'bar', collection: nestedCollection }
     ]
 
     view = new Body { collection }
@@ -34,3 +35,9 @@ describe 'Body', ->
 
     it 'has a model reference', ->
       expect(options.model).toBe view.collection.first()
+
+    it 'has a collection reference', ->
+      expect(options.collection).toBe view.collection.first().get('collection')
+
+    it 'has a bodyView reference', ->
+      expect(options.bodyView).toBe view.constructor

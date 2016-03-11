@@ -10,6 +10,8 @@ class Body extends Marionette.CollectionView
   childViewOptions: (model) ->
     columns: @columns
     model: model
+    collection: model.get('collection') # should default to something else? or allow ovverride
+    bodyView: this.constructor
 
   initialize: ({ @columns, @collection }) ->
 
