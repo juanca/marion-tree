@@ -8,7 +8,8 @@ class Body extends Marionette.CollectionView
 
   childView: BodyRow
   childViewOptions: (model) ->
-    { @columns, model }
+    columns: @columns
+    model: model
 
   initialize: ({ @columns, @collection }) ->
 
