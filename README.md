@@ -13,6 +13,5 @@
 ### Notes
 
 * Better README (with useful `npm` commands)
-* Recursive tree fieldable lists
 * Better name (FieldableLists?)
 * Cells of cells (fields of fields)? or facilitate easy modularization of cells
