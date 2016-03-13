@@ -3,6 +3,8 @@ module.exports =
   output:
     path: __dirname
     filename: 'index.js'
+    libraryTarget: 'this'
+    library: 'MarionetteTree'
   module:
     loaders: [
       { test: /\.coffee$/, loader: 'coffee' }

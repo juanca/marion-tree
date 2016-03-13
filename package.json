@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack --progress --colors && http-server",
     "test": "karma start",
-    "dev": "webpack-dev-server --progress --colors"
+    "dev": "webpack --watch --progress --colors"
   },
   "keywords": [],
   "author": "Juan Carlos Medina",
