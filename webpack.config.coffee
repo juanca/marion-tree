@@ -9,4 +9,4 @@ module.exports =
       { test: /\.scss$/, loaders: ['style', 'css', 'sass'] }
     ]
   resolve:
-    extensions: ['', '.web.coffee', '.web.js', '.coffee', '.js', '.scss']
+    extensions: ['', '.coffee', '.scss']
