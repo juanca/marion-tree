@@ -1,5 +1,5 @@
 {
-  "name": "marion-tree",
+  "name": "marionette-tree",
   "version": "1.0.0",
   "description": "Semantic data trees in Backbone.Marionette",
   "main": "index.js",
