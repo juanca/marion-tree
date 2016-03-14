@@ -101,7 +101,6 @@ this["MarionetteTree"] =
 
 	__webpack_require__(9);
 	__webpack_require__(8);
-	__webpack_require__(7);
 	module.exports = __webpack_require__(6);
 
 

@@ -3,7 +3,7 @@ webpack = require 'webpack'
 module.exports =
   entry:
     dist: './index.coffee'
-    externals: ['jquery', 'underscore', 'backbone', 'backbone.marionette'],
+    externals: ['jquery', 'underscore', 'backbone.marionette'],
   output:
     path: __dirname
     filename: 'marionette-tree.js'
