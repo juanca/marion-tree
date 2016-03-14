@@ -9,9 +9,3 @@
 ### Testing
 
 ### Accessing the application
-
-### Notes
-
-* Better README (with useful `npm` commands)
-* Better name (FieldableLists?)
-* Cells of cells (fields of fields)? or facilitate easy modularization of cells

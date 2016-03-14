@@ -8,10 +8,17 @@ class BodyRowColumns extends Marionette.CollectionView
 
   childView: DefaultCell
   getChildView: (column) ->
-    column.get('cell') ? @childView
+    if column.get 'cells'
+      this.constructor
+    else
+      column.get('cell') ? @childView
 
   childViewOptions: (column) ->
-    { column, @model }
+    if column.get 'cells'
+      columns = new Backbone.Collection column.get('cells')
+      { columns, @model }
+    else
+      { column, @model }
 
   initialize: ({ @columns, @model }) ->
     @collection = @columns

@@ -36,3 +36,14 @@ describe 'BodyRowColumns', ->
 
     renderedText = view.children.map (stringCellView) -> stringCellView.$el.text()
     expect(renderedText).toEqual ['hello', 'world']
+
+  it 'uses BodyRowColumns for many cells', ->
+    showView columns: new Backbone.Collection [
+      { cells: [
+        { cell: Backbone.Marionette.ItemView.extend template: -> 'hello' }
+        { cell: Backbone.Marionette.ItemView.extend template: -> 'world' }
+      ] }
+    ]
+
+    renderedText = view.children.first().children.map (stringCellView) -> stringCellView.$el.text()
+    expect(renderedText).toEqual ['hello', 'world']

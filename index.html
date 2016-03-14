@@ -27,8 +27,10 @@
       <div id='example-2'></div>
       <script type='text/javascript'>
         var columns = new Backbone.Collection([
-          { label: 'ID', name: 'id' },
-          { label: 'Title', name: 'title' },
+          { label: 'Title', cells: [
+            { name: 'id' },
+            { name: 'title' },
+          ]},
           { label: 'Value', name: 'value' },
           { label: 'Boolean', name: 'boolean' },
           { label: 'Created Date', name: 'created_at' }

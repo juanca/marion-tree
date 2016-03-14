@@ -826,14 +826,27 @@ webpackJsonpMarionetteTree([0],[
 
 	  BodyRowColumns.prototype.getChildView = function(column) {
 	    var ref;
-	    return (ref = column.get('cell')) != null ? ref : this.childView;
+	    if (column.get('cells')) {
+	      return this.constructor;
+	    } else {
+	      return (ref = column.get('cell')) != null ? ref : this.childView;
+	    }
 	  };
 
 	  BodyRowColumns.prototype.childViewOptions = function(column) {
-	    return {
-	      column: column,
-	      model: this.model
-	    };
+	    var columns;
+	    if (column.get('cells')) {
+	      columns = new Backbone.Collection(column.get('cells'));
+	      return {
+	        columns: columns,
+	        model: this.model
+	      };
+	    } else {
+	      return {
+	        column: column,
+	        model: this.model
+	      };
+	    }
 	  };
 
 	  BodyRowColumns.prototype.initialize = function(arg) {
@@ -883,7 +896,7 @@ webpackJsonpMarionetteTree([0],[
 
 
 	// module
-	exports.push([module.id, ".body-row-columns {\n  display: flex; }\n", ""]);
+	exports.push([module.id, ".body-row-columns {\n  display: flex;\n  flex-grow: 1;\n  flex-basis: 0; }\n", ""]);
 
 	// exports
 
