@@ -1,11 +1,9 @@
-# Lists of lists in Backbone.Marionette
+# MarionetteTree
 
-## Developing
+Easily create a data grid for your backbone collections!
 
-### Requirements
+## Features
 
-* `npm install` to ensure your system is up-to-date!
-
-### Testing
-
-### Accessing the application
+* Custom view for each column of the grid
+* Nested rows
+* Groups of columns
