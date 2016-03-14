@@ -1,5 +1,6 @@
 webpackConfig = require('./webpack.config.coffee')
 webpackConfig.entry = {}
+webpackConfig.plugins = []
 
 module.exports = (config)  ->
   config.set
