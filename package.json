@@ -1,6 +1,6 @@
 {
   "name": "marionette-tree",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Semantic data trees in Backbone.Marionette",
   "repository" : "juanca/marionette-tree",
   "bugs": {
