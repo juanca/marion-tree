@@ -1,8 +1,12 @@
+webpack = require 'webpack'
+
 module.exports =
-  entry: './index.coffee'
+  entry:
+    dist: './index.coffee'
+    externals: ['jquery', 'underscore', 'backbone', 'backbone.marionette'],
   output:
     path: __dirname
-    filename: 'index.js'
+    filename: 'marionette-tree.js'
     libraryTarget: 'this'
     library: 'MarionetteTree'
   module:
@@ -12,3 +16,6 @@ module.exports =
     ]
   resolve:
     extensions: ['', '.coffee', '.scss']
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin 'externals', 'marionette-tree.externals.js'
+  ]
