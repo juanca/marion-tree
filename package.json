@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "Juan Carlos Medina",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "jasmine-core": "^2.4.1",
     "jasmine-jquery-matchers": "^1.1.1",
