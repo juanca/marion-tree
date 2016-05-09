@@ -9,7 +9,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack --progress --colors && http-server",
-    "test": "karma start",
+    "test": "karma start --single-run --browsers PhantomJS",
+    "test:phantomjs": "karma start --browsers PhantomJS",
+    "test:chrome": "karma start --browsers Chrome",
     "dev": "webpack --watch --progress --colors"
   },
   "keywords": [],
@@ -21,7 +23,9 @@
     "karma": "^0.13.21",
     "karma-chrome-launcher": "^0.2.2",
     "karma-jasmine": "^0.3.7",
+    "karma-phantomjs-launcher": "^1.0.0",
     "karma-webpack": "^1.7.0",
+    "phantomjs-prebuilt": "^2.1.7",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
