@@ -2,9 +2,9 @@
   "name": "marionette-tree",
   "version": "1.0.1",
   "description": "Semantic data trees in Backbone.Marionette",
-  "repository" : "juanca/marionette-tree",
+  "repository": "juanca/marionette-tree",
   "bugs": {
-    "url" : "https://github.com/juanca/marionette-tree/issues"
+    "url": "https://github.com/juanca/marionette-tree/issues"
   },
   "main": "index.js",
   "scripts": {
