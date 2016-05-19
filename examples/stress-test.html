@@ -1,0 +1,38 @@
+<html>
+  <head>
+    <title>Stress Test Example</title>
+    <script type='text/javascript' src='../marionette-tree.externals.js'></script>
+    <script type='text/javascript' src='../marionette-tree.js'></script>
+  </head>
+  <body>
+    <!--
+    Benchmarks (collection length * columns): total / script / layout
+
+    jQuery@100x5: 12s / 1.15s / 0.03s
+    jQuery@1000x5: 12s / 11.15s / 0.5s
+
+    -->
+    <section>
+      <div id='controls'></div>
+      <div id='example'></div>
+      <script type='text/javascript'>
+        var collection = new Backbone.Collection([]);
+
+        for(var i = 1; i <= 100; i += 1) {
+          collection.add({
+            id: i,
+            title: 'Hello world ' + i + '!',
+            value: Math.floor(100 * i * Math.random()),
+            boolean: Math.random() < 0.5,
+            created_at: new Date(1000000000000000 * Math.random())
+          });
+        }
+
+        var grid = new MarionetteTree.GridView({ collection: collection });
+        grid.render();
+
+        document.querySelector('#example').appendChild(grid.el);
+      </script>
+    </section>
+  </body>
+</html>
