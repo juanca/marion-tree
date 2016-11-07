@@ -480,6 +480,8 @@ webpackJsonpMarionetteTree([0],[
 	    return (ref = column.get('headerCell')) != null ? ref : this.childView;
 	  };
 
+	  HeaderRow.prototype.sort = false;
+
 	  HeaderRow.prototype.initialize = function(arg) {
 	    this.columns = arg.columns;
 	    return this.collection = this.columns;
@@ -647,6 +649,8 @@ webpackJsonpMarionetteTree([0],[
 	      bodyView: this.constructor
 	    };
 	  };
+
+	  Body.prototype.sort = false;
 
 	  Body.prototype.initialize = function(arg) {
 	    this.columns = arg.columns, this.collection = arg.collection;
@@ -848,6 +852,8 @@ webpackJsonpMarionetteTree([0],[
 	      };
 	    }
 	  };
+
+	  BodyRowColumns.prototype.sort = false;
 
 	  BodyRowColumns.prototype.initialize = function(arg) {
 	    this.columns = arg.columns, this.model = arg.model;

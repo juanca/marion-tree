@@ -30,6 +30,7 @@
   },
   "dependencies": {
     "backbone.marionette": "^2.4.4",
+    "backbone.marionette.native": "file:///Users/juanca/Projects/backbone.marionette.native",
     "coffee-loader": "^0.7.2",
     "coffee-script": "^1.10.0",
     "css-loader": "^0.23.1",

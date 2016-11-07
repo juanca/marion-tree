@@ -3,13 +3,17 @@
     <title>Stress Test Example</title>
     <script type='text/javascript' src='../marionette-tree.externals.js'></script>
     <script type='text/javascript' src='../marionette-tree.js'></script>
+    <script type='text/javascript' src='../node_modules/backbone.marionette.native/backbone.marionette.native.js'></script>
   </head>
   <body>
     <!--
     Benchmarks (collection length * columns): total / script / layout
 
-    jQuery@100x5: 12s / 1.15s / 0.03s
+    jQuery@100x5: 1.5s / 1.15s / 0.03s
     jQuery@1000x5: 12s / 11.15s / 0.5s
+
+    Backbone.Marionette.Native@100x5: 1.5s / 1s / 0.03s
+    Backbone.Marionette.Native@1000x5: 12s / 11s / 0.3s
 
     -->
     <section>
@@ -18,7 +22,7 @@
       <script type='text/javascript'>
         var collection = new Backbone.Collection([]);
 
-        for(var i = 1; i <= 100; i += 1) {
+        for(var i = 1; i <= 1; i += 1) {
           collection.add({
             id: i,
             title: 'Hello world ' + i + '!',

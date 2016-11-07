@@ -13,6 +13,8 @@ class Body extends Marionette.CollectionView
     collection: model.get('collection') # should default to something else? or allow ovverride
     bodyView: this.constructor
 
+  sort: false
+
   initialize: ({ @columns, @collection }) ->
 
 module.exports = Body

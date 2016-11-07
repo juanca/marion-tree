@@ -10,6 +10,8 @@ class HeaderRow extends Marionette.CollectionView
   getChildView: (column) ->
     column.get('headerCell') ? @childView
 
+  sort: false
+
   initialize: ({ @columns }) ->
     @collection = @columns
 

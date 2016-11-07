@@ -20,6 +20,8 @@ class BodyRowColumns extends Marionette.CollectionView
     else
       { column, @model }
 
+  sort: false
+
   initialize: ({ @columns, @model }) ->
     @collection = @columns
 
